@@ -10,7 +10,7 @@ nowDatetime = now.strftime("%Y-%m-%d %H:%M:%S")
 print("메뉴 로딩중...")
 
 # DB 접속 및 테이블 생성
-#file_path = "./myenv/mini_project/database.db"
+file_path = "./myenv/mini_project/database.db"
 conn= sqlite3.connect(file_path, isolation_level=None)
 c = conn.cursor()
 c.execute("CREATE TABLE IF NOT EXISTS products(id INTEGER PRIMARY KEY, product_name text,price INTEGER, remains INTEGER, regdate text)")
