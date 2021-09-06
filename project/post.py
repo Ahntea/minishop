@@ -1,0 +1,45 @@
+#게시글 로딩하기, 게시글 상세 확인하기
+#메뉴 출력하기, 게시글 수정하기
+#게시글 쓰기, 게시글 삭제하기
+#게시글 목록 확인하기, 게시글 저장하기
+class Post():
+    """
+        게시물 클래스
+        param id : 글번호
+        param title : 글제목
+        param content : 글내용
+        param view_count : 조회수
+    """
+    def __init__(self, id, title, content, view_count):
+        self.id = id
+        self.title = title
+        self.content = content
+        self.view_count = view_count
+    
+    def set_post(self, id, title, content, view_count):
+        self.number = id
+        self.title = title
+        self.text = content
+        self.view_count = view_count
+
+    def add_view_count(self):
+        self.view_count += 1
+
+    def get_id(self):
+        return self.id
+
+    def get_title(self):
+        return self.title
+
+    def get_content(self):
+        return self.content
+
+    def get_view_count(self):
+        return self.view_count
+
+if __name__ == "__main__":
+    post = Post(1, "테스트", "테스트입니다.",0)
+
+    post.add_view_count()
+
+    print(post.get_view_count())
